@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="16" result="Passed" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="6" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0,7980064">
+  <test-suite type="TestSuite" id="1000" name="UnityRX test" fullname="UnityRX test" runstate="Runnable" testcasecount="16" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.798006" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="6">
+    <test-suite type="Assembly" id="1026" name="Assembly-CSharp-Editor.dll" fullname="C:/Users/User/Desktop/Dev/Unity/UnityRX test/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="16" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.773975" total="16" passed="16" failed="0" inconclusive="0" skipped="0" asserts="6">
+      <properties>
+        <property name="_PID" value="8708" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="GenericCompositeTests" fullname="GenericCompositeTests" classname="GenericCompositeTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.371517" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4">
+        <test-case id="1005" name="TestCompositeBreadthFirstIterator" fullname="GenericCompositeTests.TestCompositeBreadthFirstIterator" methodname="TestCompositeBreadthFirstIterator" classname="GenericCompositeTests" runstate="Runnable" seed="134073473" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.019998" asserts="1" />
+        <test-case id="1003" name="TestCompositeInOrderIterator" fullname="GenericCompositeTests.TestCompositeInOrderIterator" methodname="TestCompositeInOrderIterator" classname="GenericCompositeTests" runstate="Runnable" seed="847700861" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.281609" asserts="1" />
+        <test-case id="1002" name="TestCompositePostOrderIterator" fullname="GenericCompositeTests.TestCompositePostOrderIterator" methodname="TestCompositePostOrderIterator" classname="GenericCompositeTests" runstate="Runnable" seed="1237507253" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.012402" asserts="1" />
+        <test-case id="1004" name="TestCompositePreOrderIterator" fullname="GenericCompositeTests.TestCompositePreOrderIterator" methodname="TestCompositePreOrderIterator" classname="GenericCompositeTests" runstate="Runnable" seed="1759405711" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.012584" asserts="1" />
+      </test-suite>
+      <test-suite type="TestFixture" id="1006" name="RxExtensionLearningTests" fullname="RxExtensionLearningTests" classname="RxExtensionLearningTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.378970" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="2">
+        <test-suite type="ParameterizedMethod" id="1016" name="AggregateAKAReduce" fullname="RxExtensionLearningTests.AggregateAKAReduce" classname="RxExtensionLearningTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.029368" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1015" name="AggregateAKAReduce(100,200,300,400)" fullname="RxExtensionLearningTests.AggregateAKAReduce(100,200,300,400)" methodname="AggregateAKAReduce" classname="RxExtensionLearningTests" runstate="Runnable" seed="463764031" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.023110" asserts="0">
+            <output><![CDATA[1000
+]]></output>
+          </test-case>
+        </test-suite>
+        <test-case id="1017" name="CombineLatest" fullname="RxExtensionLearningTests.CombineLatest" methodname="CombineLatest" classname="RxExtensionLearningTests" runstate="Runnable" seed="1800022619" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.016708" asserts="0">
+          <output><![CDATA[2
+3
+6
+]]></output>
+        </test-case>
+        <test-case id="1023" name="Concat" fullname="RxExtensionLearningTests.Concat" methodname="Concat" classname="RxExtensionLearningTests" runstate="Runnable" seed="255448151" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.023336" asserts="0">
+          <output><![CDATA[1
+2
+3
+1
+2
+3
+]]></output>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1012" name="Merge" fullname="RxExtensionLearningTests.Merge" classname="RxExtensionLearningTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.040652" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1011" name="Merge(System.Int32[],System.Int32[])" fullname="RxExtensionLearningTests.Merge(System.Int32[],System.Int32[])" methodname="Merge" classname="RxExtensionLearningTests" runstate="Runnable" seed="1469500597" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.034358" asserts="0">
+            <output><![CDATA[1
+2
+3
+4
+5
+6
+7
+]]></output>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1014" name="PairWise" fullname="RxExtensionLearningTests.PairWise" classname="RxExtensionLearningTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.022699" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1013" name="PairWise(1,2,3,4)" fullname="RxExtensionLearningTests.PairWise(1,2,3,4)" methodname="PairWise" classname="RxExtensionLearningTests" runstate="Runnable" seed="667012367" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.016442" asserts="0">
+            <output><![CDATA[2
+3
+4
+]]></output>
+          </test-case>
+        </test-suite>
+        <test-case id="1022" name="Sample" fullname="RxExtensionLearningTests.Sample" methodname="Sample" classname="RxExtensionLearningTests" runstate="Runnable" seed="1162426194" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.010052" asserts="0">
+          <output><![CDATA[1
+]]></output>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1008" name="Scan" fullname="RxExtensionLearningTests.Scan" classname="RxExtensionLearningTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.020683" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1007" name="Scan(System.Int32[])" fullname="RxExtensionLearningTests.Scan(System.Int32[])" methodname="Scan" classname="RxExtensionLearningTests" runstate="Runnable" seed="1513382455" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.014460" asserts="0">
+            <output><![CDATA[1
+3
+6
+]]></output>
+          </test-case>
+        </test-suite>
+        <test-case id="1018" name="SelectAKAMap" fullname="RxExtensionLearningTests.SelectAKAMap" methodname="SelectAKAMap" classname="RxExtensionLearningTests" runstate="Runnable" seed="1334743776" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.012341" asserts="0">
+          <output><![CDATA[5
+10
+]]></output>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1010" name="SelectManyAKAFlatMap" fullname="RxExtensionLearningTests.SelectManyAKAFlatMap" classname="RxExtensionLearningTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.033610" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1009" name="SelectManyAKAFlatMap(1,2,3,4)" fullname="RxExtensionLearningTests.SelectManyAKAFlatMap(1,2,3,4)" methodname="SelectManyAKAFlatMap" classname="RxExtensionLearningTests" runstate="Runnable" seed="1086409447" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.027328" asserts="0">
+            <output><![CDATA[1
+6
+2
+7
+3
+8
+4
+9
+]]></output>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1021" name="Wait" fullname="RxExtensionLearningTests.Wait" classname="RxExtensionLearningTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.036852" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="2">
+          <test-case id="1019" name="Wait(1,2,3,4,5)" fullname="RxExtensionLearningTests.Wait(1,2,3,4,5)" methodname="Wait" classname="RxExtensionLearningTests" runstate="Runnable" seed="1121753209" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.007357" asserts="1" />
+          <test-case id="1020" name="Wait(5)" fullname="RxExtensionLearningTests.Wait(5)" methodname="Wait" classname="RxExtensionLearningTests" runstate="Runnable" seed="1230992926" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.006031" asserts="1" />
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1025" name="Zip_2_2" fullname="RxExtensionLearningTests.Zip_2_2" classname="RxExtensionLearningTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.019933" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1024" name="Zip_2_2(1,2,3)" fullname="RxExtensionLearningTests.Zip_2_2(1,2,3)" methodname="Zip_2_2" classname="RxExtensionLearningTests" runstate="Runnable" seed="1598062647" result="Passed" start-time="2018-04-30 18:51:11Z" end-time="2018-04-30 18:51:11Z" duration="0.013384" asserts="0">
+            <output><![CDATA[3
+4
+]]></output>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

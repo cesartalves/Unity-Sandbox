@@ -14,15 +14,15 @@ RESULTS_FILEPATH="$(pwd)/unitTestsResult.xml"
 #   -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" 
 #   -quit
 
-# echo "Attempting to build $project for OS X"
-#   "$UNITY_EXECUTABLE"  
-#   -batchmode 
-#   -nographics 
-#   -silent-crashes 
-#   -logFile $(pwd)/unity.log 
-#   -projectPath $(pwd) 
-#   -buildOSXUniversalPlayer "$(pwd)/Build/osx/$project.app" 
-#   -quit
+echo "Attempting to build $project for OS X"
+  "$UNITY_EXECUTABLE"  
+  -batchmode 
+  -nographics 
+  -silent-crashes 
+  -logFile $(pwd)/unity.log 
+  -projectPath $(pwd) 
+  -buildOSXUniversalPlayer "$(pwd)/Build/osx/$project.app" 
+  -quit
 
 # echo "Attempting to build $project for Linux"
 #   "$UNITY_EXECUTABLE"  
@@ -41,6 +41,7 @@ echo "Running Editor Tests"
   -runEditorTests \
   -editorTestsResultFile "$RESULTS_FILEPATH" \
   -nographics
+  -testPlatform StandaloneOSXIntel64
   -quit
 
 echo 'Logs from build'
