@@ -1,9 +1,12 @@
 #! /bin/sh
 
-project="<YOUR PROJECT NAME HERE>"
+project="Unity-Sandbox"
+UNITY_EXECUTABLE="/Applications/Unity/Unity.app/Contents/MacOS/Unity"
+RESULTS_FILEPATH="$(pwd)/unitTestsResult.xml"
 
 echo "Attempting to build $project for Windows"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity 
+time \
+  "$UNITY_EXECUTABLE" 
   -batchmode 
   -nographics 
   -silent-crashes 
@@ -13,7 +16,8 @@ echo "Attempting to build $project for Windows"
   -quit
 
 echo "Attempting to build $project for OS X"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity 
+time \
+  "$UNITY_EXECUTABLE"  
   -batchmode 
   -nographics 
   -silent-crashes 
@@ -23,7 +27,8 @@ echo "Attempting to build $project for OS X"
   -quit
 
 echo "Attempting to build $project for Linux"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity 
+time \
+  "$UNITY_EXECUTABLE"  
   -batchmode 
   -nographics 
   -silent-crashes 
@@ -32,8 +37,19 @@ echo "Attempting to build $project for Linux"
   -buildLinuxUniversalPlayer "$(pwd)/Build/linux/$project.exe" 
   -quit
 
+echo "Running Editor Tests"
+time \
+  "$UNITY_EXECUTABLE" \
+  -projectPath $(pwd) \
+  -batchmode \
+  -runEditorTests \
+  -editorTestsResultFile "$RESULTS_FILEPATH" \
+  -nographics
+
 echo 'Logs from build'
 cat $(pwd)/unity.log
+echo ""
+echo "Results xml: $RESULTS_FILEPATH"
 
 
 echo 'Attempting to zip builds'
