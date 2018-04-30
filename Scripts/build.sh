@@ -35,12 +35,13 @@ RESULTS_FILEPATH="$(pwd)/unitTestsResult.xml"
 #   -quit
 
 echo "Running Editor Tests"
-  "$UNITY_EXECUTABLE" \
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -projectPath $(pwd) \
   -batchmode \
   -runEditorTests \
   -editorTestsResultFile "$RESULTS_FILEPATH" \
   -nographics
+  -quit
 
 echo 'Logs from build'
 cat $(pwd)/unity.log
