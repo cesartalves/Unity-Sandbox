@@ -2,7 +2,7 @@
 
 # BASE_URL=https://netstorage.unity3d.com/unity
 # HASH=88d00a7498cd
-# VERSION=5.5.1f1
+VERSION=2017.3.1f1
 
 download() {
   file=$1
@@ -24,4 +24,4 @@ install() {
 # install "MacEditorInstaller/Unity-$VERSION.pkg"
 # install "MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-$VERSION.pkg"
 # install "MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-$VERSION.pkg"
-# install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg"
+install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg"
