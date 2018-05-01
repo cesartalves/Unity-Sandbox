@@ -44,11 +44,10 @@ echo "Running Editor Tests"
   -nographics \
   -quit
 
-echo 'Logs from test'
-cat $(pwd)/unity.log
-echo ""
+echo "Logs from test at $(pwd)/unity.log"
+
 echo "Results xml: $RESULTS_FILEPATH"
-cat "$RESULTS_FILEPATH"
+cat $(pwd)/unitTestsResult.xml
 
 echo ""
 echo "Attempting to build $project for Windows"
@@ -57,7 +56,7 @@ echo "Attempting to build $project for Windows"
   -nographics \ 
   -logFile $(pwd)/unity.log \ 
   -projectPath $(pwd) \ 
-  -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" 
+  -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" \
   -quit
 
 echo ""
