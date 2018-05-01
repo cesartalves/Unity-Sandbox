@@ -1,8 +1,9 @@
 #! /bin/sh
+# find links here http://unity.grimdork.net/2017.3.1p4
 
 BASE_URL=https://download.unity3d.com/download_unity
-HASH=fc1d3344e6ea
-VERSION=2017.3.1f1
+HASH=7f25373c3e03
+VERSION=2017.3.1p4
 
 download() {
   file=$1
@@ -21,7 +22,7 @@ install() {
 }
 
 
-install "MacEditorInstaller/Unity-$VERSION.pkg"
+install "MacEditorInstaller/Unity.pkg"
 install "MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-$VERSION.pkg"
 #install "MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-$VERSION.pkg"
 #install "MacEditorTargetInstaller/UnitySetup-Linux-Support-for-Editor-$VERSION.pkg"
