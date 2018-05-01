@@ -40,9 +40,9 @@ echo "Running Editor Tests"
   -projectPath $(pwd) \
   -batchmode \
   -runEditorTests \
-  -editorTestsResultFile "$RESULTS_FILEPATH" \
-  -nographics
-  -testPlatform StandaloneOSXIntel64
+#  -editorTestsResultFile "$RESULTS_FILEPATH" \
+  -nographics \
+#  -testPlatform StandaloneOSXIntel64 \
   -quit
 
 echo 'Logs from build'
