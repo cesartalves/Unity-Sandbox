@@ -34,22 +34,35 @@ RESULTS_FILEPATH="$(pwd)/unitTestsResult.xml"
 #   -buildLinuxUniversalPlayer "$(pwd)/Build/linux/$project.exe" 
 #   -quit
 
-echo $(pwd)
 echo "Running Editor Tests"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -projectPath $(pwd) \
   -batchmode \
   -runEditorTests \
-#  -editorTestsResultFile "$RESULTS_FILEPATH" \
+  -editorTestsResultFile "$RESULTS_FILEPATH" \
+  -logFile $(pwd)/unity.log \
   -nographics \
-#  -testPlatform StandaloneOSXIntel64 \
   -quit
 
-echo 'Logs from build'
+echo 'Logs from test'
 cat $(pwd)/unity.log
 echo ""
 echo "Results xml: $RESULTS_FILEPATH"
+cat "$RESULTS_FILEPATH"
 
+echo ""
+echo "Attempting to build $project for Windows"
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \ 
+  -batchmode \ 
+  -nographics \ 
+  -logFile $(pwd)/unity.log \ 
+  -projectPath $(pwd) \ 
+  -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" 
+  -quit
+
+echo ""
+echo 'Logs from build'
+cat $(pwd)/unity.log
 
 # echo 'Attempting to zip builds'
 # zip -r $(pwd)/Build/linux.zip $(pwd)/Build/linux/
