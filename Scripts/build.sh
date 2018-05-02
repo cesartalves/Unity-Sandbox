@@ -9,11 +9,7 @@ echo "Running Editor Tests for $project"
   -projectPath $(pwd) \
   -batchmode \
   -runEditorTests \
-  -editorTestsResultFile $(pwd)/result.xml \
   -nographics \
-  -quit
-
-
 
 echo "Unit test logs"
 #cat $(pwd)/result.xml
@@ -34,6 +30,7 @@ echo "Attempting to build $project for OSX"
   "$UNITY_EXECUTABLE"  
   -batchmode 
   -nographics 
+  -stackTraceLogType Full
   -logFile $(pwd)/unity.log 
   -projectPath $(pwd) 
   -executeMethod"CIController.BuildWindowsPlayer"
