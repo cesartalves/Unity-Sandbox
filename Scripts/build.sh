@@ -42,6 +42,7 @@ echo "Attempting to build $project for OSX"
 echo "Build logs"
 cat $(pwd)/unity.log 
 
+tree $(pwd)
 # echo "Attempting to build $project for Linux"
 #   "$UNITY_EXECUTABLE"  
 #   -batchmode 
