@@ -13,12 +13,11 @@ echo "Running Editor Tests for $project"
   -editorTestsResultFile "$RESULTS_FILEPATH" \
   -nographics \
   -testPlatform StandaloneOSXIntel64 \
+  -quit
 
 #echo "Unit test logs"
 echo "Finished Editor Tests"
 #cat $(pwd)/result.xml
-
-tree $(pwd)
 
 # echo "Attempting to build $project for Windows"
 #   "$UNITY_EXECUTABLE" 
