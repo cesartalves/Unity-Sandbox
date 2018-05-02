@@ -5,11 +5,12 @@ UNITY_EXECUTABLE="/Applications/Unity/Unity.app/Contents/MacOS/Unity"
 RESULTS_FILEPATH="$(pwd)/result.xml"
 
 echo "Running Editor Tests for $project"
-"$UNITY_EXECUTABLE" \
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -projectPath $(pwd) \
   -batchmode \
   -runEditorTests \
   -nographics 
+  -quit
 
 #echo "Unit test logs"
 echo "Finished Editor Tests"
@@ -28,7 +29,7 @@ tree $(pwd)
 #   -quit
 
 echo "Attempting to build $project for OSX"
-  "$UNITY_EXECUTABLE"  
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
   -stackTraceLogType Full \
