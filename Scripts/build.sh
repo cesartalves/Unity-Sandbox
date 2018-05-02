@@ -11,7 +11,8 @@ echo "Running Editor Tests for $project"
   -runEditorTests \
   -nographics \
 
-echo "Unit test logs"
+#echo "Unit test logs"
+echo "Finished Editor Tests"
 #cat $(pwd)/result.xml
 
 tree $(pwd)
@@ -28,12 +29,12 @@ tree $(pwd)
 
 echo "Attempting to build $project for OSX"
   "$UNITY_EXECUTABLE"  
-  -batchmode 
-  -nographics 
-  -stackTraceLogType Full
-  -logFile $(pwd)/unity.log 
-  -projectPath $(pwd) 
-  -executeMethod"CIController.BuildWindowsPlayer"
+  -batchmode \
+  -nographics \
+  -stackTraceLogType Full \
+  -logFile $(pwd)/unity.log \
+  -projectPath $(pwd) \
+  -executeMethod"CIController.BuildWindowsPlayer" \
   -quit
 
 echo "Build logs"
