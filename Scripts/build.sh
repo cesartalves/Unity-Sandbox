@@ -9,7 +9,7 @@ echo "Running Editor Tests for $project"
   -projectPath $(pwd) \
   -batchmode \
   -runEditorTests \
-  -nographics \
+  -nographics 
 
 #echo "Unit test logs"
 echo "Finished Editor Tests"

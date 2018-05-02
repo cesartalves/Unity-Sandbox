@@ -7,7 +7,8 @@ using UnityEditor;
 using UnityEngine;
 
 public class CIController {
-    
+
+    [MenuItem("Automation/BuildWindows64")]
     public static void BuildWindowsPlayer()
     {
         string[] args = System.Environment.GetCommandLineArgs();
@@ -21,13 +22,14 @@ public class CIController {
             }
         }
 
-        File.WriteAllText(Environment.CurrentDirectory + "/current.txt", "it is heree");
+        var dir = System.IO.Directory.CreateDirectory(Path.Combine(Environment.CurrentDirectory, "Builds"));
+        File.WriteAllText(dir.FullName + Path.DirectorySeparatorChar + "current.txt", "it is heree");
 
         var scenes = EditorBuildSettings.scenes.Select(it => it.path).ToArray();
         
         BuildPipeline.BuildPlayer( 
           scenes,
-          Environment.CurrentDirectory + "/myPlayer.exe", 
+          dir.FullName + Path.DirectorySeparatorChar + "myPlayer.exe", 
           BuildTarget.StandaloneWindows64,
           BuildOptions.None
           );
