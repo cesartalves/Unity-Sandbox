@@ -4,12 +4,14 @@ project="Unity-Sandbox"
 UNITY_EXECUTABLE="/Applications/Unity/Unity.app/Contents/MacOS/Unity"
 RESULTS_FILEPATH="$(pwd)/result.xml"
 
+
 echo "Running Editor Tests for $project"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -projectPath $(pwd) \
   -batchmode \
   -runEditorTests \
-  -nographics 
+  -nographics \
+  -testPlatform StandaloneOSXIntel64 \
   -quit
 
 #echo "Unit test logs"
