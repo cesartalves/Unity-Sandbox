@@ -13,8 +13,12 @@ echo "Running Editor Tests for $project"
   -nographics \
   -quit
 
+
+
 echo "Unit test logs"
-cat $(pwd)/result.xml
+#cat $(pwd)/result.xml
+
+tree $(pwd)
 
 # echo "Attempting to build $project for Windows"
 #   "$UNITY_EXECUTABLE" 
@@ -26,16 +30,17 @@ cat $(pwd)/result.xml
 #   -buildWindowsPlayer "$(pwd)/Build/windows/$project.exe" 
 #   -quit
 
-
 echo "Attempting to build $project for OSX"
   "$UNITY_EXECUTABLE"  
   -batchmode 
   -nographics 
-  -silent-crashes 
   -logFile $(pwd)/unity.log 
   -projectPath $(pwd) 
-  -buildOSXUniversalPlayer "$(pwd)/Build/osx/$project.app" 
+  -executeMethod"CIController.BuildWindowsPlayer"
   -quit
+
+echo "Build logs"
+cat $(pwd)/unity.log 
 
 # echo "Attempting to build $project for Linux"
 #   "$UNITY_EXECUTABLE"  
