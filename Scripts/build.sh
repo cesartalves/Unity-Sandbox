@@ -10,9 +10,9 @@ echo "Running Editor Tests for $project"
   -projectPath $(pwd) \
   -batchmode \
   -runEditorTests \
+  -editorTestsResultFile "$RESULTS_FILEPATH" \
   -nographics \
   -testPlatform StandaloneOSXIntel64 \
-  -quit
 
 #echo "Unit test logs"
 echo "Finished Editor Tests"
