@@ -3,10 +3,10 @@ osx_image: xcode8.3
 rvm:
 - 2.2
 before_install:
-- chmod a+x ./Scripts/install.sh
-- chmod a+x ./Scripts/build.sh
-- chmod a+x ./Scripts/unitTests.sh
-- chmod a+x ./Scripts/compressBuilds.sh
+- chmod a+x ./TravisCI/Scripts/install.sh
+- chmod a+x ./TravisCI/Scripts/build.sh
+- chmod a+x ./TravisCI/Scripts/unitTests.sh
+- chmod a+x ./TravisCI/Scripts/compressBuilds.sh
 install:
 - ./Scripts/install.sh
 before_scripts:
@@ -15,3 +15,15 @@ script:
 - ./Scripts/build.sh
 after_script:
 - ./Scripts/compressBuilds.sh
+
+# blocklist
+branches:
+  except:
+  - legacy
+  - experimental
+
+# safelist
+branches:
+  only:
+  - master
+  - production
