@@ -1,0 +1,14 @@
+{
+    "name": "Composite.Tests",
+    "references": [
+        "Main"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

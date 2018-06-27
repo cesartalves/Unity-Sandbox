@@ -5,7 +5,7 @@ using Zenject;
 
 public class InjectedClick : MonoBehaviour {
 
-    [Inject]
+    [InjectAttribute]
     protected Greeter greeter;
 
 	public void Click()
