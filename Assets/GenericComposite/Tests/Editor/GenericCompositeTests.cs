@@ -13,13 +13,13 @@ public class GenericCompositeTests {
     public void Create12345Tree()
     {
         GenericComposite<int> composite = new GenericComposite<int>(1);
-        composite.
-            AddChild(2).
-                AddChild(4)
-                    .AddSibling(5);
+        
+                           composite
+                     .AddChild(2)
+           .AddChild(4)  .AddSibling(5);
 
-        composite.
-            AddChild(3);
+                           composite
+                                  .AddChild(3);
 
         _composite = composite;
     }
